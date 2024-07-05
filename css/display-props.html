@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: black;
+        }
+        #head {
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .subHead {
+            color: aliceblue;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #crop {
+            border: 10px solid rgb(101, 96, 96);
+        }
+        .block {
+            border: 2px solid rgb(0, 0, 0);
+            display: block;
+            background-color: rgb(255, 255, 255);
+
+        }
+        #crop2 {
+            border: 20px solid gray;
+            background-color: gray;
+        }
+        .inline {
+            border: 2px solid black;
+            display: inline;
+            background-color: white;
+            padding: 10px;
+        }
+        #crop3 {
+            border: 10px solid gray;
+            display: flex;
+        }
+        .item1 {
+            padding: 5px;
+            text-align: center;
+        }
+        .Grow1 {
+            font-weight: bold;
+            border-right: 10px solid gray;
+            background: white;
+            flex-grow: 1;
+
+            
+        }
+        .Grow2 {
+            font-weight: bold;
+            color: black;
+            background: pink;
+            flex-grow: 2;
+        }
+        #crop4 {
+            border: 10px solid gray;
+            display: flex;
+            background-color: gray;
+        }
+        .item2 {
+            padding: 5px;
+            padding-right: 200px;
+            text-align: center;
+        }
+        .shrink1 {
+            font-weight: bold;
+            background: white;
+            flex-shrink: 1;
+            border-right: 10px solid gray;
+        }
+        .shrink2 {
+            background: pink;
+            font-weight: bold;
+            flex-shrink: 1;
+            border-right: 10px solid gray;
+        }
+        .shrink3 {
+            background:rgb(238, 202, 202);
+            font-weight: bold;
+            flex-shrink: 2;
+        }
+
+
+    </style>
+    
+
+</head>
+
+<body>
+   <h1 style="color: aliceblue; text-align: center;">Exercise about property display</h1>
+    <div class="subHead"><h2>&nbsp;Your most frequently used apps</h2><p>&nbsp;&nbsp;Hint: Display: Block</p> </div>
+    <div id="crop">
+    <div class='block'><h3>&nbsp;Youtube</h3></div>
+    <div class="block"><h3>&nbsp;Facebook</h3></div>
+    <div class="block"><h3>&nbsp;Safari</h3></div>
+    </div>
+    <div class="subHead"><h2>&nbsp;Places you want to visit in Thailand</h2><p>&nbsp;&nbsp;Hint: Display: Inline</p></div>
+    <div id="crop2">
+    <span class="inline">Chiang Mai</span>
+    <span class="inline">Nhong Bua Lamphu</span>
+    <span class="inline">Chonburi</span>
+    </div>
+    <div class="subHead"><h2>&nbsp;Countries you want to visit</h2><p>&nbsp;&nbsp;Hint: Display: Flex (with flex-grow)</p></div>
+    <div id = "crop3">
+    <div class="item1 Grow1">Japan</div>
+    <div class="item1 Grow1">Peru</div>
+    <div class="item1 Grow2">New Zealand</div>
+    </div>
+    <div class="subHead"><h2>&nbsp;Activities you want to do</h2><p>&nbsp;&nbsp;Hint: Display: Flex (with flex-shrink)</p></div>
+    <div id = "crop4">
+    <div class="item2 shrink1">Volleyball</div>
+    <div class="item2 shrink2">Basketball</div>
+    <div class="item2 shrink3">Boxing</div>
+</body>
+</html>
