@@ -62,7 +62,15 @@
 
         @media (max-width: 767px) {
             .product-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 10fr;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+            }
+            li {
+                display: block;
+                margin-bottom: 10px;
             }
         }
 
@@ -72,13 +80,15 @@
     </style>
 </head>
 <body>
-    <div id="head"><h1 style="margin-left: 1%;">Our Products<br></h1>
+    <div id="head">
+        <h1 style="margin-left: 1%;">Our Products<br></h1>
         <ul style="margin-top: -1%; margin-left: -1%;">
             <li><a href="#home">Home</a></li>
             <li><a href="#products">Products</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
-        </ul></div>
+        </ul>
+    </div>
 
     <main class="product-grid">
         <div class="product">
