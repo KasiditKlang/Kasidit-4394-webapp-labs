@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            margin: 0%;
+            display:grid;
+        }
+        #head {
+            font-size:smaller;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: white;
+            background-color: rgb(29, 29, 52);
+            margin-bottom: 1%;
+        }
+            ul {
+            list-style-type: none; 
+            margin: 0;
+            padding: 1%;
+        }
+        li {
+        display: inline;
+    }
+    li a {
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+    }
+    .product {
+        border-style: solid;
+        display: flex;
+        flex-direction: column;
+        color: black;
+        border-color: rgb(146, 138, 138);
+        padding: 20px;
+        text-align: center;
+        border-radius: 5px;
+        }
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        display: grid;
+        gap: 20px;
+        max-width: 1500px;
+        margin: 1%;
+
+    }
+        
+    * {
+        box-sizing: border-box;
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="head"><h1 style="margin-left: 1%;">Our Product<br></h1></id>
+        <ul style="margin-top: -1%; margin-left: -1%;">
+            <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+            </ul>
+    </div>
+    <main class="product-grid">
+        <div class="product">
+          <img src="https://via.placeholder.com/200x200" alt="Product 1" />
+          <h2>Product 1</h2>
+          <p>Description of Product 1</p>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200x200" alt="Product 2" />
+            <h2>Product 2</h2>
+            <p>Description of Product 2</p>
+          </div>
+          <div class="product">
+            <img src="https://via.placeholder.com/200x200" alt="Product 3" />
+            <h2>Product 3</h2>
+            <p>Description of Product 3</p>
+          </div>
+          <div class="product">
+            <img src="https://via.placeholder.com/200x200" alt="Product 4" />
+            <h2>Product 4</h2>
+            <p>Description of Product 4</p>
+          </div>
+          <div class="product">
+            <img src="https://via.placeholder.com/200x200" alt="Product 5" />
+            <h2>Product 5</h2>
+            <p>Description of Product 5</p>
+          </div>
+          <div class="product">
+            <img src="https://via.placeholder.com/200x200" alt="Product 6" />
+            <h2>Product 6</h2>
+            <p>Description of Product 6</p>
+          </div>
+          
+      </main>
+
+
+</body>
+</html>
