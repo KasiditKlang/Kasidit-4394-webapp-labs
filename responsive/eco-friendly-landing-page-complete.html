@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenLife - Eco-Friendly Household Products</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(217, 252, 225);
+            margin: 0;
+        }
+        header {
+            font-size: smaller;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: white;
+            background-color: rgb(29, 29, 52);
+            margin: 0;
+            padding: 20px 0;
+        }
+        nav ul {
+            text-align: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+        }
+        nav li a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+        #hero {
+            background-image: url('https://via.placeholder.com/1500x600');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            font-size: larger;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            margin-bottom: 3%;
+            padding: 40px 10%;
+            color: rgb(53, 108, 26);
+        }
+        button {
+            background-color: rgb(23, 87, 34);
+            color: white;
+            border-radius: 10%;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        #featured-products {
+            margin: 0 auto;
+            padding: 0 10%;
+            color: rgb(29, 63, 12);
+        }
+        .product {
+            display: flex;
+            flex-direction: column;
+            color: black;
+            text-align: left;
+            background-color: white;
+            border-radius: 3%;
+        }
+        img {
+            border-radius: 2%;
+        }
+        .product-grid {
+            display: grid;
+            gap: 20px;
+            max-width: 100%;
+            margin: 1% auto;
+        }
+        h3 {
+            margin-left: 2%;  
+            color: rgb(53, 108, 26);  
+        }
+        p {
+            margin-left: 2%;
+            font-size: medium;
+        }
+        @media (min-width: 821px) {
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width: 820px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+            }
+            li {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#Products">Products</a></li>
+                <li><a href="#aboutUs">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Eco-Friendly Living Made Easy</h1>
+            <button onclick="window.location.href='https://google.com';" class="button">Shop now</button>
+        </section>
+
+        <section id="featured-products">
+            <h2>Our Featured Products</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="https://via.placeholder.com/300x200" alt="Bamboo Toothbrush" />
+                    <div><h3>Bamboo Toothbrush</h3>
+                    <p>Sustainable oral care for a greener future.</p></div>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/300x200" alt="Reusable Water Bottle" />
+                    <div><h3>Reusable Water Bottle</h3>
+                    <p>Stay hydrated while reducing plastic wastse.</p></div>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/300x200" alt="Organic Cotton Tote Bag" />
+                    <div><h3>Organic Cotton Tote Bag</h3>
+                    <p>Shop in style with our durable, eco-friendly bags.</p></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
