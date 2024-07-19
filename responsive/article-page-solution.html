@@ -5,108 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Article Page</title>
     <style>
-                * {
+        * {
             box-sizing: border-box;
         }
         body {
             background-color: aliceblue;
-            margin: 0%;
-            display:grid;
+            margin: 0;
+            display: grid;
         }
-        #head {
-            font-size:smaller;
+        header {
+            font-size: smaller;
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
             color: white;
             background-color: rgb(29, 29, 52);
-            margin-bottom: 1%;
-        }
-        .a1 {
-            display: inline;
-
-        }
-        .l1 {
-            margin: 0;
             padding: 1%;
         }
-        li a {
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
             color: white;
-            padding: 10px;
             text-decoration: none;
         }
-        li b {
-            padding: 10px;
-            text-decoration-line: underline;
-            color: blue;
-            
-        }
-        h2 {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        .p {
+        main {
             display: flex;
             flex-wrap: wrap;
+        }
+        article {
             width: 55%;
-            float: left;
-            margin-left: 1%;
+            padding: 1%;
             font-family: Arial, Helvetica, sans-serif;
-        }
-        h3 {
-            font-family: Arial, Helvetica, sans-serif;
-            margin-left: 1%;
-        }
-
-        footer {
-        color: aliceblue;
-        position: fixed;
-        text-align: center;
-        bottom: 2%;
-        width: 100%;
-        height: 50px;
-        margin: 0 auto;
-        background-color: rgb(47, 46, 45);
         }
         aside {
-            display: flex;
-            flex-direction: column;
-            background-color: gainsboro;
             width: 40%;
-            height: 100%;
-            float: left;
+            background-color: gainsboro;
             padding: 10px;
         }
-
+        aside ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        aside ul li {
+            margin-bottom: 10px;
+        }
+        aside ul li a {
+            color: rgb(52, 35, 177);
+            text-decoration: underline;
+        }
+        footer {
+            color: aliceblue;
+            position: fixed;
+            text-align: center;
+            bottom: 2%;
+            width: 100%;
+            height: 50px;
+            background-color: rgb(47, 46, 45);
+            margin: 0 auto;
+        }
         @media (max-width: 769px) {
-            .p {
+            article {
                 width: 100%;
             }
-            ul {
+            aside {
+                width: 40%;
+                margin-bottom: 15%;
+            }
+            nav ul {
                 display: flex;
                 flex-direction: column;
             }
-            li {
+            nav ul li {
                 display: block;
                 margin-bottom: 10px;
             }
         }
-
     </style>
 </head>
 <body>
-    <header id="head">
-        <h1 style="margin-left: 1.4%;">My Blog</h1>
+    <header>
+        <h1>My Blog</h1>
         <nav>
-            <ul class="l1">
-                <li class="a1"><a href="#home">Home</a></li>
-                <li class="a1"><a href="#articles">Articles</a></li>
-                <li class="a1"><a href="#about">About</a></li>
-                <li class="a1"><a href="#contact">Contact</a></li>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        
     </header>
     <main>
-        <article class="p">
+        <article>
             <h2>Main Article Title</h2>
             <p>This is the main content of your article. It should be long enough to demonstrate responsive typography. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore <br>magna aliqua. </p>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
@@ -115,9 +110,9 @@
         <aside>
             <h3>Related Articles</h3>
             <ul>
-                <li><b href="#related article1">Related Article 1</b></li>
-                <li><b href="#related article 2">Related Article 2</b></li>
-                <li><b href="#related article 3">Related Article 3</b></li>
+                <li><a href="#related-article1">Related Article 1</a></li>
+                <li><a href="#related-article2">Related Article 2</a></li>
+                <li><a href="#related-article3">Related Article 3</a></li>
             </ul>
         </aside>
     </main>
