@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+        }
+        #head {
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .subHead {
+            color: aliceblue;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #crop {
+            border: 10px solid rgb(101, 96, 96);
+        }
+        .block {
+            border: 2px solid rgb(0, 0, 0);
+            display: block;
+            background-color: rgb(255, 255, 255);
+
+        }
+        #crop2 {
+            border: 20px solid gray;
+            background-color: gray;
+        }
+        .inline {
+            border: 2px solid black;
+            display: inline;
+            background-color: white;
+            padding: 10px;
+        }
+        #crop3 {
+            border: 10px solid gray;
+            display: flex;
+        }
+        .item1 {
+            padding: 5px;
+            text-align: center;
+        }
+        .Grow1 {
+            font-weight: bold;
+            border-right: 10px solid gray;
+            background: white;
+            flex-grow: 1;
+
+            
+        }
+        .Grow2 {
+            font-weight: bold;
+            color: black;
+            background: pink;
+            flex-grow: 2;
+        }
+        #crop4 {
+            border: 10px solid gray;
+            display: flex;
+            background-color: gray;
+        }
+        .item2 {
+            padding: 5px;
+            padding-right: 200px;
+            text-align: center;
+        }
+        .shrink1 {
+            font-weight: bold;
+            background: white;
+            flex-shrink: 1;
+            border-right: 10px solid gray;
+        }
+        .shrink2 {
+            background: pink;
+            font-weight: bold;
+            flex-shrink: 1;
+            border-right: 10px solid gray;
+        }
+        .shrink3 {
+            background:rgb(238, 202, 202);
+            font-weight: bold;
+            flex-shrink: 2;
+        }
+        @media (min-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .grid-item {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-grid {
+              grid-template-columns: repeat(2, 1fr);
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+            }
+            li {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+
+
+    </style>
+    
+
+</head>
+
+<body>
+  <main class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+  </main>
+</body>
+</html>
