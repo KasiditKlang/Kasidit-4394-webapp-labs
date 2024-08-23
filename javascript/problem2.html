@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Calculator</title>
+</head>
+<body>
+    <style>
+        .head {
+            text-align: center;
+        }
+        .subHead {
+            text-align: left;
+        }
+        li {
+            margin-left: 2%;
+        }
+        .p1 {
+            margin-left: 2%;
+        }
+    </style>
+    <script>
+        function displayStats(values) {
+            let sum = values.reduce((a, b) => a + b, 0);
+            let average = values.length > 0 ? (sum / values.length).toFixed(2) : 0;
+            let min = values.length > 0 ? Math.min(...values) : 0;
+            let max = values.length > 0 ? Math.max(...values) : 0;
+
+            alert(`For the list ${values}, the average is ${average}, the minimum is ${min},and the maximum is ${max}`);
+        }
+
+        function readInput() {
+            let values = [];
+            let n;
+
+            while (true) {
+                n = prompt('Enter an integer (a negative integer to quit):');
+                n = parseFloat(n);
+
+                if (!isNaN(n) && n === Math.floor(n)) {
+                    if (n < 0) break;
+                    if (n > 0) values.push(n);
+                }
+            }
+
+            displayStats(values);
+        }
+
+        readInput();
+    </script>
+    <h1 class="head">Statistics Calculator!</h1>
+    <h1 class="subHead">Write the web app to prompt accepting for positive integers until the user eneters a negative integer</h1>
+    <li>If the entered text is not a positive integer number, then the web app will keep asking for a number until the valid positive integer is entered</li>
+    <li>If the entered text is a negative integer, then the web app will show the statistics (average, min, max) of all entered positive integers</li>
+    <h1 class="subHead">Notes:</h1>
+    <p class="p1">1. You need to implement functions to check whether an entered text is a positive integer or not and wheter an entered text is a negative integer or not</p>
+    <p class="p1">2. You need to implement functions to compute average, min, and max of a list of integers</p>
+</body>
+</html>
