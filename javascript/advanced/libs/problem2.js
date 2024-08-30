@@ -8,20 +8,20 @@ function Book(title, author) {
 const Library = {
     books: [],
 
-    addBook: function(book) {
-        this.books.push(book);
-        document.write(`Add: ${book.title} </br>`);
+    addBook: (book) => {
+        Library.books.push(book);
+        document.write(`Added: ${book.title}<br/>`);
     },
 
-    searchBooks: function(query) {
-        const results = this.books.filter(book => 
+    searchBooks: (query) => {
+        const results = Library.books.filter(book => 
             book.title.includes(query) || book.author.includes(query)
         );
         
         if (results.length > 0) {
-            results.forEach(book => document.write(`Found: ${book.title} by ${book.author}</br>`));
+            results.forEach(book => document.write(`Found: ${book.title} by ${book.author}<br/>`));
         } else {
-            document.write(`Book with query ${query} is not found</br>`);
+            document.write(`Book with query "${query}" is not found<br/>`);
         }
     }
 };
@@ -45,7 +45,7 @@ document.write("<br/>Searching for the book with title 'Design Thinking':<br/>")
 Library.searchBooks("Design Thinking");
 
 // Displaying all books in the library
-function displayBooks() {
+const displayBooks = () => {
     Library.books.forEach((book, index) => {
         let num = index + 1;  
         document.write(`${num}. ${book.title} by ${book.author}<br/>`);
