@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Simple DOM example</title>
+    </head>
+    <body>
+        <section>
+            <img src="https://building.kku.ac.th/wp-content/uploads/2019/08/Th_color.png" alt="KKU">
+            <p>Here we will add a link to the 
+                <a href="http://www.kku.ac.th">KKU</a></p>
+        </section>
+        <script>
+            var imgs = document.getElementsByTagName("img");
+            var sec = document.querySelector('section p');
+            sec.textContent = "We hope you enjoy learning";
+            sec.style.backgroundColor = "Black";
+            sec.style.padding = "10px";
+            sec.style.width = "250px";
+            sec.style.textAlign = "center";
+            sec.style.color = "White";
+            sec.style.inlineSize = "740px"
+            imgs[0].src = "outputs/en-kku.jpg";
+            imgs[0].onclick = function() {
+                window.open("http://www.kku.ac.th");
+            }
+        </script>
+</html>
