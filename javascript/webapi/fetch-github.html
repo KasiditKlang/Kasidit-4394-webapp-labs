@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile</title>
+    <style>
+        .avatar-img {
+            border: 5px solid blue;
+            border-radius: 50%;
+            width: 200px;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h1 a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        h1 a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="github-name"></h1>
+    <img id="github-avatar" class="avatar-img" src="" alt="GitHub Avatar">
+
+    <script src="fetch-github.js">
+    </script>
+
+</body>
+</html>
