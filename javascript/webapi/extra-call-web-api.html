@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>List of COVID-19 Data</h1>
+    <div id="response"></div>
+    <script>
+        fetch("https://provinces-of-thailand.p.rapidapi.com/province", {
+            method: "GET",
+            headers: {
+                "Content-type": "application/json; charset=UTF-8",
+                "x-rapidapi-host": "provinces-of-thailand.p.rapidapi.com",
+                "x-rapidapi-key": "1f585a3bfdmshdc35a304e6918eep1a7caajsnf62aa826989d"
+            }
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            const outputElement = document.getElementById("response");
+            const ol = document.createElement("ol");
+            data.forEach((item) => {
+                const li = document.createElement("li");
+                li.textContent = JSON.stringify(item.province_name).replace(/"/g, "");
+                ol.appendChild(li);
+            });
+            outputElement.appendChild(ol);
+        });
+    </script>
+</body>
+</html>
