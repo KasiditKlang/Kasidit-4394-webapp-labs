@@ -4,7 +4,8 @@
     "scripts": {
         "start": "node index.js",
         "add": "node add.js",
-        "subtract": "node subtract.js"
+        "subtract": "node subtract.js",
+        "calculator": "node calculator.js"
     },
     "author": "", 
     "license": "ISC",

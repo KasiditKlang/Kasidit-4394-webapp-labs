@@ -19,7 +19,7 @@ if (args.length < 2) {
     const n2 = args[1];
 
     if (isNaN(n1) || isNaN(n2)) {
-        console.log("Please enter numbers");
+        console.log("Please enter two numbers");
     } else {
        
         const rl = createInterface({
