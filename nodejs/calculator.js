@@ -12,9 +12,9 @@ function subtract(n1, n2) {
 
 const args = process.argv.slice(2);
 
-if (args.length < 2) {
+if (args.length < 2 || args.length > 2) {
     console.log("Please enter two numbers");
-} else {
+} else if(args.length == 2) {
     const n1 = args[0];
     const n2 = args[1];
 
