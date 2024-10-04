@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { Helmet } from 'react-helmet';
 
 function App() {
   const [GitHubInfo, setGithubInfo] = useState({
@@ -26,12 +25,8 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Helmet>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>GitHub Profile</title>
-      </Helmet>
+    
+
       <div>
         <h1 style={{ textAlign: 'center'}}>
           My Github information
@@ -54,7 +49,7 @@ function App() {
           </a>
         </h1>
       </div>
-    </>
+
   );
 }
 
