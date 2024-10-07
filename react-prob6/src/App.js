@@ -1,40 +1,72 @@
-/* eslint-disable jsx-a11y/alt-text */
-import {useState} from "react";
-import {users} from "./data.js";
+import { useState } from "react";
+import { users } from "./users.js";
+import "./App.css"; 
+
 export default function Gallary() {
   const [index, setIndex] = useState(0);
-  const [showMore, setShowMore] = useState(false);
+  const [showFollowers, setShowFollowers] = useState(false);
 
   function handleNextClick() {
-    setIndex(index + 1);
+    if (index < users.length - 1) {
+      setIndex(index + 1);
+      setShowFollowers(false); 
+    }
   }
 
-  function handleMoreClick() {
-    setShowMore(!showMore);
+  function handlePreviousClick() {
+    if (index > 0) {
+      setIndex(index - 1);
+      setShowFollowers(false);
+    }
   }
 
-  let sculpture = users[index];
+  function handleFollowersClick() {
+    setShowFollowers(!showFollowers);
+  }
+
+  let user = users[index];
+
   return (
     <>
-      <button onClick={handleNextClick}>Next</button>
-      <img src={sculpture.imgURL} className="image" />
-      &nbsp;
-      <a href={sculpture.url} target='_blank' rel="noreferrer">
-        {sculpture.alt}
-      </a>
-      &nbsp;({sculpture.followers} followers)
-      <h3>
-        ({index + 1}) of {users.length}
-      </h3>
-      <button onClick={handleMoreClick}>
-      {showMore ? 'Hide' : 'Show'} details
-      </button>
-      {showMore && <p>{sculpture.imgURL}</p>}
-      <p/>
-      <img
-        src={sculpture.url}
-        alt={sculpture.alt}
-      />
+      <h1 style={{textAlign: "center"}}>Sample GitHub Repositories</h1>
+      <div style={{ textAlign: "center" }}>
+        <a href={user.url} target="_blank" rel="noreferrer">
+          <h2>{user.alt}</h2>
+          <img src={user.imgURL} alt={user.alt} className="image" />
+        </a>
+
+        <div style={{ marginTop: "20px" }}>
+          <button className="prev-button"
+            onClick={handlePreviousClick}
+            style={{ margin: "20px", backgroundColor: "orange"}}
+            disabled={index === 0}
+          >
+            Previous
+          </button>
+
+          <div style={{ display: "inline-block" }}>
+            <button className="follow-button"
+              onClick={handleFollowersClick}
+              style={{ margin: "20px", backgroundColor: "lightblue" }}
+            >
+              {showFollowers ? "Hide followers" : "Show followers"}
+            </button>
+            {showFollowers && (
+              <span style={{ marginLeft: "10px", fontSize: "18px" }}>
+                {user.followers} followers
+              </span>
+            )}
+          </div>
+
+          <button className="next-button"
+            onClick={handleNextClick}
+            style={{ margin: "20px", backgroundColor: "greenyellow" }}
+            disabled={index === users.length - 1}
+          >
+            Next
+          </button>
+        </div>
+      </div>
     </>
   );
 }
